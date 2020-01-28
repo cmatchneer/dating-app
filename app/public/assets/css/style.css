@@ -2,6 +2,11 @@ body {
     background: goldenrod;
 }
 
+form {
+    margin: 0 auto;
+    width: 33%;
+}
+
 .jumbotron {
     margin: 0 auto;
     background: black;
