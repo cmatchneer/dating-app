@@ -4,6 +4,6 @@ var people = [{
     second: 3,
     third: 4,
     fourth: 5,
-    fifith: 1
+    fifth: 1
 }]
 module.exports = people;
