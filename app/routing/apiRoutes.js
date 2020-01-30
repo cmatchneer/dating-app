@@ -7,26 +7,34 @@ module.exports = function(app) {
     app.post("/api/add", function(input, response) {
         var person = input.body;
         const userVaules = Object.values(person)
-            // console.log("user values" + userVaules);
-        people.push(person);
+
+
 
         var total = 0;
-        var comapre = 50;
+        var compare = 50;
         var match = [people[0]];
         for (var i = 0; i < people.length; i++) {
+
             const dataBaseValues = Object.values(people[i]);
-            // console.log("data base values" + dataBaseValues);
+            console.log(dataBaseValues);
+
 
             for (var j = 1; j < userVaules.length; j++) {
                 total += Math.abs(dataBaseValues[j] - userVaules[j]);
-            }
-            if (total < comapre) {
-                compare = total;
-                match[0] = people[i];
+                console.log(total + "total")
+                    //total = Math.abs(total)
+                    // console.log(total);
             }
 
+            if (total < compare) {
+                compare = total;
+                match[0] = people[i];
+                // console.log(compare + "compare");
+            }
+            total = 0;
         }
-        console.log(total);
-        response.json(people);
+
+        people.push(person);
+        response.json(match);
     });
 }
