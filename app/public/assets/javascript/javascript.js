@@ -13,9 +13,18 @@ $(document).ready(function() {
 
         $.post("/api/add", newPerson).
         then(function(response) {
-            console.log(response);
+            console.log(response[0]);
+            console.log(response[0].name);
+            var name = $("<h1>");
+            var pic = $("<img>");
+            name.text(response[0].name);
+            pic.attr("src", response[0].pic)
+            $("#data").prepend(name, pic);
         })
 
 
+    });
+    $("#close").on("click", function() {
+        $("#data").empty();
     })
 })

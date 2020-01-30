@@ -19,7 +19,7 @@ module.exports = function(app) {
             console.log(dataBaseValues);
 
 
-            for (var j = 1; j < userVaules.length; j++) {
+            for (var j = 2; j < userVaules.length; j++) {
                 total += Math.abs(dataBaseValues[j] - userVaules[j]);
                 console.log(total + "total")
                     //total = Math.abs(total)
