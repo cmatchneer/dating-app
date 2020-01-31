@@ -1,20 +1,18 @@
 var people = [{
-        name: "Chris Matchneer",
+        name: "Bill Gibbons",
         pic: "https://townsquare.media/site/295/files/2011/12/Billy-Gibbons.jpg?w=980&q=75",
-        first: 2,
-        second: 3,
-        third: 4,
-        fourth: 5,
-        fifth: 1
+        scores: [5, 5, 5, 3, 2, 1, 2, 3, 1, 1]
+
     },
     {
-        name: "Rick Matchneer",
-        pic: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Billy_Gibbons_of_ZZ_Top_performing_in_San_Antonio%2C_Texas_2015.jpg/1280px-Billy_Gibbons_of_ZZ_Top_performing_in_San_Antonio%2C_Texas_2015.jpg",
-        first: 5,
-        second: 5,
-        third: 5,
-        fourth: 5,
-        fifth: 5
+        name: "Mick Jagger",
+        pic: "https://www.inforum.com/incoming/3974800-2iwhmy-072419.F.FF.WAYBACK/alternates/BASE_LANDSCAPE/072419.F.FF.WAYBACK",
+        scores: [2, 1, 2, 5, 5, 5, 1, 2, 1, 2]
+
+    }, {
+        name: "Brian Johnson",
+        pic: "https://i.dailymail.co.uk/i/pix/2016/03/08/02/31F964BC00000578-3481395-image-m-50_1457403889844.jpg",
+        scores: [2, 1, 2, 3, 2, 1, 4, 4, 5, 5]
     }
 ]
 module.exports = people;

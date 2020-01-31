@@ -4,17 +4,15 @@ $(document).ready(function() {
 
         var newPerson = {
             name: $("#name").val().trim(),
-            first: $("#1").val().trim(),
-            second: $("#2").val().trim(),
-            third: $("#3").val().trim(),
-            fourth: $("#4").val().trim(),
-            fifth: $("#5").val().trim()
+            pic: $("#pic").val().trim(),
+            scores: [$("#1").val(), $("#2").val(), $("#3").val(), $("#4").val(), $("#5").val(),
+                $("#6").val(), $("#7").val(), $("#8").val(), $("#9").val(), $("#10").val()
+            ]
         }
 
         $.post("/api/add", newPerson).
         then(function(response) {
-            console.log(response[0]);
-            console.log(response[0].name);
+
             var name = $("<h1>");
             var pic = $("<img>");
             var div = $("<div>");
@@ -28,7 +26,7 @@ $(document).ready(function() {
             name.text(response[0].name);
             pic.attr("src", response[0].pic)
             $(div).append(name, pic), button;
-            $("#data").prepend(div);
+            $("#data").html(div);
         })
 
 
