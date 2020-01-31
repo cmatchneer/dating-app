@@ -17,9 +17,18 @@ $(document).ready(function() {
             console.log(response[0].name);
             var name = $("<h1>");
             var pic = $("<img>");
+            var div = $("<div>");
+            var button = $("button");
+            button.attr({
+                id: "close",
+                dismiss: "modal",
+                type: "button"
+            })
+            button.addClass("btn btn-secondary");
             name.text(response[0].name);
             pic.attr("src", response[0].pic)
-            $("#data").prepend(name, pic);
+            $(div).append(name, pic), button;
+            $("#data").prepend(div);
         })
 
 

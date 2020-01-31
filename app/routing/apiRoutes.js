@@ -7,9 +7,6 @@ module.exports = function(app) {
     app.post("/api/add", function(input, response) {
         var person = input.body;
         const userVaules = Object.values(person)
-
-
-
         var total = 0;
         var compare = 50;
         var match = [people[0]];
@@ -17,8 +14,6 @@ module.exports = function(app) {
 
             const dataBaseValues = Object.values(people[i]);
             console.log(dataBaseValues);
-
-
             for (var j = 2; j < userVaules.length; j++) {
                 total += Math.abs(dataBaseValues[j] - userVaules[j]);
                 console.log(total + "total")
@@ -33,8 +28,6 @@ module.exports = function(app) {
             }
             total = 0;
         }
-
-        people.push(person);
         response.json(match);
     });
 }
