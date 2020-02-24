@@ -12,11 +12,10 @@ $(document).ready(function() {
 
         $.post("/api/add", newPerson).
         then(function(response) {
-
             var name = $("<h1>");
             var pic = $("<img>");
             var div = $("<div>");
-            var button = $("button");
+            var button = $("<button>");
             button.attr({
                 id: "close",
                 dismiss: "modal",
@@ -25,13 +24,14 @@ $(document).ready(function() {
             button.addClass("btn btn-secondary");
             name.text(response[0].name);
             pic.attr("src", response[0].pic)
-            $(div).append(name, pic), button;
+            $(div).append(name, pic, button);
             $("#data").html(div);
-        })
+        });
 
 
     });
     $("#close").on("click", function() {
         $("#data").empty();
+
     })
 })
